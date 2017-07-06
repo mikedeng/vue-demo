@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="example-3">
+	<form>
+		<input type="text" name="name">
+		<button v-on:click="warn('Form cannot be submitted yet', $event)">Say hi</button>
+	</form>
+</div>
+
+<script type="text/javascript">
+	var app15 = new Vue({
+		el: '#example-3',
+		methods: {
+			warn: function(message, event){
+				if(event) event.preventDefault()
+				console.log(event)
+				alert(message)
+			}
+		}
+	})
+</script>
+</body>
+</html>

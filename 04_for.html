@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app-4">
+	<ul>
+		<li v-for="todo in todos">
+			{{ todo.text }}
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app-4',
+		data: {
+			todos: [
+				{text: 'vue'},
+				{text: 'react'},
+				{text: 'ember'}
+			]
+		}
+	})
+</script>
+</body>
+</html>

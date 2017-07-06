@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="example-1">
+	<form>
+		<input type="radio" v-model="toggle2" v-bind:value="a2">
+			<label>a2</label>
+		<input type="radio" v-model="toggle2" v-bind:value="b2">
+			<label>b2</label>
+			<br/>
+			<br/>
+		<input type="checkbox" v-model="toggle" v-bind:true-value="a" v-bind:false-value="b">
+		<br/>
+		<br/>
+		<select v-model="selected">
+			<option v-bind:value="{number: 123}">123</option>
+		</select>
+	</form>
+</div>
+
+<script type="text/javascript">
+	var app18 = new Vue({
+		el: '#example-1',
+		data: {
+			a2: 'A2',
+			b2: 'B2',
+			toggle2: 'B',
+			a: 'A',
+			b: 'B',
+			toggle: 'B',
+			selected: ''
+		},
+		watch: {
+			toggle2: function (newVal) {
+				alert(newVal)
+			}
+			,toggle: function (newVal) {
+				alert(newVal)
+			},
+			selected: function(newVal){
+				alert(newVal.number)
+			}
+		}
+	})
+</script>
+</body>
+</html>

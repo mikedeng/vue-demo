@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="example-2">
+	<button v-on:click="greet">Greet</button>
+</div>
+
+<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+<script type="text/javascript">
+	var app12 = new Vue({
+		el: '#example-2',
+		data: {
+			name: 'Vue.js'
+		},
+		methods: {
+			greet: function(event){
+				alert('Hello' + this.name + '!')
+				if(event){
+					alert(event.target.tagName)
+				}
+			}
+		}
+	})
+</script>
+</body>
+</html>

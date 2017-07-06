@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="example-1">
+	<form>
+		name: <input type="text" name="name" v-model.lazy="name">
+		<br/>
+		age: <input type="text" name="age" v-model.lazy.number="age">
+		<br/>
+		desc with blank: <input type="text" name="desc" v-model.lazy.trim="desc">
+	</form>
+</div>
+
+<script type="text/javascript">
+	var app18 = new Vue({
+		el: '#example-1',
+		data: {
+			name: '',
+			age: null,
+			desc: '      1'
+		},
+		watch: {
+			name: function (newVal) {
+				alert(newVal)
+			},
+			age: function (newVal) {
+				alert(typeof newVal)
+			}
+		}
+	})
+</script>
+</body>
+</html>

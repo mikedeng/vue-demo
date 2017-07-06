@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="example-1">
+	<form>
+		<input type="checkbox" id="jack" value="jack" v-model="checkedNames">
+		<label for="jack">jack</label>
+
+		<input type="checkbox" id="tom" value="tom" v-model="checkedNames">
+		<label for="tom">tom</label>
+
+		<input type="checkbox" id="cooper" value="cooper" v-model="checkedNames">
+		<label for="cooper">cooper</label>
+
+		<input type="checkbox" id="nick" value="nick" v-model="checkedNames">
+		<label for="nick">nick</label>
+
+		<br>
+		<span>Checked names: {{ checkedNames }}</span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	var app15 = new Vue({
+		el: '#example-1',
+		data: {
+			checkedNames: []
+		}
+	})
+</script>
+</body>
+</html>

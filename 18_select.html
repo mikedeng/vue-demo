@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="example-1">
+	<form>
+		<select v-model="selected">
+			<option value="">empty</option>
+			<option value='a'>A</option>
+			<option value='b'>B</option>
+			<option value='c'>C</option>
+		</select>
+		<span>Selected: {{selected}}</span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	var app18 = new Vue({
+		el: '#example-1',
+		data: {
+			selected: ''
+		}
+	})
+</script>
+</body>
+</html>

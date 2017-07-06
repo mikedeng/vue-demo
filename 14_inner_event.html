@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="example-3">
+	<button v-on:click="say('hi')">Say hi</button>
+	<button v-on:click="say('what')">Say what</button>
+</div>
+
+<script type="text/javascript">
+	var app12 = new Vue({
+		el: '#example-3',
+		methods: {
+			say: function(message){
+				alert(message)
+			}
+		}
+	})
+</script>
+</body>
+</html>

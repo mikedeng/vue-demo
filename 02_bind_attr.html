@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app-2">
+	<span v-bind:title="message">
+		checkout the title
+	</span>
+</div>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app-2',
+		data: {
+			message: 'title from here'
+		}
+	})
+</script>
+</body>
+</html>
