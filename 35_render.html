@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+
+<div id="app">
+	<child :items="items">
+	</child>
+</div>
+<body>
+
+<script type="text/javascript">
+	Vue.component('child', {
+		render: function(createElement){
+			if(this.items.length){
+				return createElement('ul', this.items.map(function(item){
+					return createElement('li', item.text)
+				}))
+			} else{
+				return createElement('p', 'no items found')
+			}
+		},props: {
+			items: []
+		}
+	})
+
+	var app = new Vue({
+		el: '#app',
+		data: {
+			items: [{ text: 1111 }, { text: 222 }]
+		}
+	})
+</script>
+</body>
+</html>

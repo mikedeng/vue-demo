@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://cdn.rawgit.com/chrisvfritz/5f0a639590d6e648933416f90ba7ae4e/raw/974aa47f8f9c5361c5233bd56be37db8ed765a09/currency-validator.js"></script>
+</head>
+
+<div id="app">
+	<async-comp></async-comp>
+</div>
+<body>
+
+<script type="text/javascript">
+	const AsyncComp = () => ({
+		component: import('./MyComp.vue'),
+		loading: LoadingComp,
+		error: ErrorComp,
+		delay: 200,
+		timeout: 3000
+	})
+	var app18 = new Vue({
+		el: '#app',
+		data: {
+		}
+	})
+</script>
+</body>
+</html>

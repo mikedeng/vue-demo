@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+
+<div id="app">
+	<input v-focus>
+</div>
+<body>
+
+<script type="text/javascript">
+	Vue.directive('focus', {
+		inserted: function(el){
+			el.focus();
+		}
+	})
+
+	var app = new Vue({
+		el: '#app',
+		data: {
+		}
+	})
+</script>
+</body>
+</html>

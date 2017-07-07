@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+
+<div id="app">
+	<my-component></my-component>
+</div>
+<body>
+
+<script type="text/javascript">
+	var myMixin = {
+		created: function () {
+			this.hello()
+		},
+		methods: {
+			hello: function(){
+				console.log('hello from mixin')
+			}
+		}
+	}
+
+	var MyComponent = Vue.extend({
+		mixins: [myMixin],
+		template: '<h1>1111</h1>'
+	})
+
+	new Vue({
+		el: '#app',
+		components: {
+			MyComponent
+		}
+	})
+</script>
+</body>
+</html>

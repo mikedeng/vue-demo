@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://cdn.rawgit.com/chrisvfritz/5f0a639590d6e648933416f90ba7ae4e/raw/974aa47f8f9c5361c5233bd56be37db8ed765a09/currency-validator.js"></script>
+</head>
+
+<div id="app">
+	<my-awsome-list :items="items">
+		<template slot="item" scope="props">
+			<li class="my-fancy-item"></li>
+		</template>
+	</my-awsome-list>
+</div>
+<body>
+
+<script type="text/javascript">
+	Vue.component('my-awsome-list', {
+		template: '<ul>\
+									<slot name="item"\
+										v-for="item in items"\
+										:text="item.text"\
+									</slot>\
+								</ul>'
+	})
+
+	var app18 = new Vue({
+		el: '#app',
+		data: {
+		}
+	})
+</script>
+</body>
+</html>

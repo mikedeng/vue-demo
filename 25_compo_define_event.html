@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="example-1">
+	<p>{{ total }}</p>
+	<button-counter v-on:increment="incrementTotal"></button-counter>
+	<button-counter v-on:increment="incrementTotal"></button-counter>
+</div>
+
+<script type="text/javascript">
+	Vue.component('button-counter', {
+		template: '<button v-on:click="increment">{{ counter }}</button>',
+		data: function () {
+			return { counter: 0 }
+		},
+		methods: {
+			increment: function(){
+				this.counter++
+				this.$emit('increment')
+			}
+		}
+	})
+
+	var app18 = new Vue({
+		el: '#example-1',
+		data: {
+			total: 0
+		},
+		methods: {
+			incrementTotal: function(){
+				this.total ++;
+			}
+		}
+	})
+</script>
+</body>
+</html>

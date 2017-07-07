@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://cdn.rawgit.com/chrisvfritz/5f0a639590d6e648933416f90ba7ae4e/raw/974aa47f8f9c5361c5233bd56be37db8ed765a09/currency-validator.js"></script>
+</head>
+
+<div id="app">
+	<async-example></async-example>
+</div>
+<body>
+
+<script type="text/javascript">
+	Vue.component('async-example', function(resolve, reject){
+		setTimeout(function(){
+			resolve({
+				template: '<div>I am async</div>'
+			})
+		}, 1000)
+	})
+	var app18 = new Vue({
+		el: '#app',
+		data: {
+		}
+	})
+</script>
+</body>
+</html>

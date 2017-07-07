@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://cdn.rawgit.com/chrisvfritz/5f0a639590d6e648933416f90ba7ae4e/raw/974aa47f8f9c5361c5233bd56be37db8ed765a09/currency-validator.js"></script>
+</head>
+
+<div id="app">
+	<child>
+		<template scope="props">
+			<span>hello from parent</span>
+			<span>{{ props.text }}</span>
+		</template>
+	</child>
+</div>
+<body>
+
+<script type="text/javascript">
+	Vue.component('child', {
+		template: '<div class="child">\
+								<slot text="hello from child"></slot>\
+							</div>'
+	})
+
+	var app18 = new Vue({
+		el: '#app',
+		data: {
+		}
+	})
+</script>
+</body>
+</html>

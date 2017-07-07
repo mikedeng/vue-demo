@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+
+<div id="app">
+	<self-input v-on:input="a">
+	</self-input>
+</div>
+<body>
+
+<script type="text/javascript">
+	Vue.component('self-input', {
+		render: function(createElement){
+			var self = this;
+			return createElement('input', {
+				domProps: {
+					value: self.value
+				},
+				on: {
+					input: function(event){
+						self.value = event.target.value
+						self.$emit('input', event.target.value)
+					}
+				}
+			})
+		}
+	})
+
+	var app = new Vue({
+		el: '#app',
+		data: {
+		},
+		methods: {
+			a: function(){
+				alert(1)
+			}
+		}
+	})
+</script>
+</body>
+</html>
